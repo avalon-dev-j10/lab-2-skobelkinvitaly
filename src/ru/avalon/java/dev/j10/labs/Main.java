@@ -1,12 +1,20 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.shapes.Shape;
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Shape[] shapes = null;
+    public static void initialize(Shape[] shapes) {
+    }
 
+    public static void randomize(Shape[] shapes) {
+    }
+
+    public static void main(String[] args) {
+        Shape[] shapes = new Shape[10];
+        initialize(shapes);
+        randomize(shapes);
         /*
          * TODO: Выполнить действия над массивом 'shapes'
          *
@@ -20,4 +28,5 @@ public class Main {
          *    статический метод в текущем классе (Main).
          */
     }
+
 }
