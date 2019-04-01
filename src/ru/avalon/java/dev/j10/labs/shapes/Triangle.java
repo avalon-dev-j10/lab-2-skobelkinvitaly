@@ -15,23 +15,64 @@ package ru.avalon.java.dev.j10.labs.shapes;
  */
 public class Triangle implements Shape {
 
-    private int rotation;
+    private float rotation;
     private float area;
     private float perimetr;
     private float x;
     private float y;
-    private float length;
+    private float side1;
+    private float side2;
+    private float side3;
+
+    public Triangle(float side1, float side2, float side3, float x, float y, float rotation) {
+        this.rotation = rotation;
+        this.x = x;
+        this.y = y;
+        this.rotation = rotation;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+
+    }
+
+    public float getSide1() {
+        return side1;
+    }
+
+    public void setSide1(float side1) {
+        this.side1 = side1;
+    }
+
+    public float getSide2() {
+        return side2;
+    }
+
+    public void setSide2(float side2) {
+        this.side2 = side2;
+    }
+
+    public float getSide3() {
+        return side3;
+    }
+
+    public void setSide3(float side3) {
+        this.side3 = side3;
+    }
 
     public float getArea() {
         return area;
     }
 
-    public int getRotation() {
+    public float getRotation() {
         return rotation;
     }
 
     public float getPerimetr() {
         return perimetr;
+    }
+
+    public void setRotation(int rotation) {
+        this.rotation = rotation;
     }
 
     public float getX() {
@@ -42,7 +83,12 @@ public class Triangle implements Shape {
         return y;
     }
 
-    public float getLength() {
-        return length;
+    public void setX(float x) {
+        this.x = x;
     }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
 }

@@ -11,22 +11,49 @@ package ru.avalon.java.dev.j10.labs.shapes;
  */
 public class Rectangle implements Shape {
 
-    private int rotation;
+    private float rotation;
+    private float width;
+    private float height;
     private float area;
     private float perimetr;
     private float x;
     private float y;
-    private float length;
+
+    public Rectangle(float width, float height, float x, float y, float rotation) {
+        this.width = width;
+        this.height = height;
+        this.x = x;
+        this.y = y;
+        this.rotation = rotation;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public float getWidth() {
+        return width;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
 
     public float getArea() {
+        area = width * height;
         return area;
     }
 
-    public int getRotation() {
+    public float getRotation() {
         return rotation;
     }
 
     public float getPerimetr() {
+        perimetr = width * 2 + height*2;
         return perimetr;
     }
 
@@ -38,8 +65,16 @@ public class Rectangle implements Shape {
         return y;
     }
 
-    public float getLength() {
-        return length;
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public void setRotation(int rotation) {
+        this.rotation = rotation;
     }
 
 }

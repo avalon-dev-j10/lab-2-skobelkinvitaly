@@ -11,23 +11,42 @@ package ru.avalon.java.dev.j10.labs.shapes;
  */
 public class Circle {
 
+    private float radius;
     private int rotation;
     private float area;
-    private float perimetr;
     private float x;
     private float y;
     private float length;
 
+    public Circle(float radius, float x, float y) {
+        this.radius = radius;
+        this.x = x;
+        this.y = y;
+    }
+
+    public float getRadius() {
+        return radius;
+    }
+
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
+
     public float getArea() {
+        area = (float) (Math.PI * radius * radius);
         return area;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
     }
 
     public int getRotation() {
         return rotation;
-    }
-
-    public float getPerimetr() {
-        return perimetr;
     }
 
     public float getX() {
@@ -39,6 +58,8 @@ public class Circle {
     }
 
     public float getLength() {
+        length = (float) (Math.PI * 2 * radius);
         return length;
     }
+
 }
